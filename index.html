@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B. Sheshadri | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --card-bg: #13131a;
+            --accent-color: #4f46e5;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #222227;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        /* Subtle grid background like the Evalu template */
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Header / Nav */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .status-tag {
+            background: rgba(79, 70, 229, 0.1);
+            color: #818cf8;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(79, 70, 229, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #fff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Core Pillars / Features Grid */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: -0.5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 80px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 12px;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Projects Section */
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+
+        .project-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            background: #222227;
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .project-item ul {
+            margin-top: 15px;
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .project-item li {
+            margin-bottom: 8px;
+        }
+
+        .tech-stack {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* About & Education */
+        .about-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 80px;
+        }
+
+        .about-box p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="container">
+        
+        <header>
+            <div class="logo">B. Sheshadri</div>
+            <div class="status-tag">Available for SWE / ML Roles</div>
+        </header>
+
+        <section class="hero">
+            <h1>Architecting Intelligent Systems<br>With Code & Data.</h1>
+            <p>Computer Science graduate student specializing in Software Engineering, Machine Learning, and Data Analytics. Focused on building high-performance solutions and production-grade AI tools.</p>
+            <a href="#projects" class="btn">Explore Projects</a>
+        </section>
+
+        <h2 class="section-title">Core Focus Areas</h2>
+        <section class="grid">
+            <div class="card">
+                <h3>LLM Orchestration</h3>
+                <p>Building specialized autonomous agents using LangChain and OpenAI APIs to streamline complex, multi-step workflows.</p>
+            </div>
+            <div class="card">
+                <h3>Machine Learning</h3>
+                <p>Engineering end-to-end data pipelines, predictive models, and deployment setups for clean, high-accuracy inference.</p>
+            </div>
+            <div class="card">
+                <h3>Backend & Analytics</h3>
+                <p>Writing highly optimized algorithmic logic in Python and Java, backed by secure, structured relational SQL systems.</p>
+            </div>
+        </section>
+
+        <h2 class="section-title" id="projects">Featured Engineering Projects</h2>
+        <section class="projects-list">
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Autonomous AI Agent Web Application</h3>
+                    <span class="project-tag">GenAI / LLMs</span>
+                </div>
+                <p>A dynamic web orchestration app built using LangChain and OpenAI models designed to automate structural tasks intelligently.</p>
+                <ul>
+                    <li>Integrated real-time external data streaming endpoints into the agent workflow.</li>
+                    <li>Designed robust custom prompt engineering frameworks to reduce processing and token latency.</li>
+                </ul>
+                <div class="tech-stack">Stack: Python • LangChain • OpenAI API • Streamlit • Git</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Diabetes Risk Predictive Pipeline</h3>
+                    <span class="project-tag">Machine Learning</span>
+                </div>
+                <p>An end-to-end healthcare data science project mapping out early classification vectors for health analytics.</p>
+                <ul>
+                    <li>Structured complete pipelines parsing complex datasets through specialized data cleaning frameworks.</li>
+                    <li>Executed heavy feature engineering matrices to establish foundational predictors using Scikit-Learn.</li>
+                </ul>
+                <div class="tech-stack">Stack: Python • Scikit-Learn • Pandas • NumPy • Matplotlib</div>
+            </div>
+        </section>
+
+        <h2 class="section-title">Background & Journey</h2>
+        <section class="about-box">
+            <p>I am currently pursuing my <strong>Master of Computer Applications (MCA)</strong> at M S Ramaiah University, scaling upon a solid academic foundation built during my <strong>BCA</strong> at GITAM University (graduating with a 7.22 CGPA).</p>
+            <p>My practical industry exposure includes working as a <strong>Data Analyst Intern at SkillForge</strong>, where I maintained core data pipelines and wrote optimized analytical SQL structures to drive strategic choices. I love building tools that balance algorithmic efficiency with intelligence.</p>
+        </section>
+
+        <footer>
+            <p>Let's build together. Reach out via 
+                <a href="#">LinkedIn</a> • 
+                <a href="#">GitHub</a> • 
+                <a href="#">Email</a>
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
