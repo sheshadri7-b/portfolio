@@ -269,19 +269,21 @@
             font-weight: 500;
         }
 
-        .tool-badge-link {
+        /* Clickable Link Badge Elements */
+        .btn-link-badge {
             font-size: 0.8rem;
             background: #22c55e;
             color: #fff;
-            padding: 4px 12px;
-            border-radius: 4px;
+            padding: 6px 14px;
+            border-radius: 6px;
             font-weight: 600;
             text-decoration: none;
-            transition: background 0.2s ease;
+            transition: opacity 0.2s;
+            display: inline-block;
         }
 
-        .tool-badge-link:hover {
-            background: #16a34a;
+        .btn-link-badge:hover {
+            opacity: 0.9;
         }
 
         /* Elegant Timeline / Experience Section */
@@ -344,6 +346,21 @@
             font-size: 1rem;
         }
 
+        /* Contact Details Panel */
+        .contact-info-panel {
+            color: var(--text-primary);
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        
+        .contact-info-panel p {
+            margin-bottom: 6px;
+        }
+
+        .contact-info-panel strong {
+            color: var(--accent);
+        }
+
         /* Footer Links */
         footer {
             margin-top: 140px;
@@ -403,7 +420,7 @@
             <span class="tech-tag">Git Version Control</span>
         </div>
 
-        <!-- SPECIAL FOCUS: HackerRank Problem Solving & Code Routine (With Active Profile Redirection) -->
+        <!-- RECONFIGURED FOCUS: HackerRank Problem Solving & Code Routine -->
         <div class="section-header">
             <h2>Problem Solving & Logic</h2>
         </div>
@@ -412,20 +429,14 @@
                 <div>
                     <div class="project-meta">
                         <span class="project-category" style="color: var(--success-green);">⚡ Algorithmic Consistency</span>
-                        <span class="tool-badge" style="background: rgba(16, 185, 129, 0.1); color: var(--success-green); border: 1px solid rgba(16, 185, 129, 0.2);">Active Practice</span>
+                        <a href="https://www.hackerrank.com/profile/sheshadribollene" target="_blank" class="btn-link-badge">View Live HackerRank Profile ↗</a>
                     </div>
                     <h3>Daily Code Routine & Logic Optimization</h3>
-                    <p>Maintaining a highly disciplined programming regimen focused on tackling complex structural puzzles, execution latency minimization, and data structure constraints.</p>
+                    <p>Maintaining a highly disciplined programming regimen focused on building professional software solutions, handling logical dependencies, and scaling performance parameters.</p>
                     <ul class="project-bullets">
-                        <li>Actively completing core data structural and algorithmic programming benchmarks on <strong>HackerRank</strong>.</li>
-                        <li>Refining problem-solving velocity across complex sorting paradigms, relational logical dependencies, and graph traversal algorithms.</li>
+                        <li>Actively solving computational architecture and design syntax logic daily on <strong>HackerRank</strong>.</li>
+                        <li>Cultivating a robust background in technical problem-solving, structural algorithm implementation, and modular runtime paradigms.</li>
                     </ul>
-                </div>
-                <div class="project-tools" style="border-color: rgba(255,255,255,0.05);">
-                    <!-- Made the badge clickable, open in a new window, and linked directly to your profile -->
-                    <a href="https://www.hackerrank.com/profile/sheshadribollene" target="_blank" class="tool-badge-link">🎯 HackerRank Verified Profile</a>
-                    <span class="tool-badge">Data Structures</span>
-                    <span class="tool-badge">Runtime Efficiency</span>
                 </div>
             </div>
         </div>
@@ -485,7 +496,7 @@
             <span class="tech-tag" style="border-color: var(--success-green); color: var(--success-green);">AI Agents for Everyone & AI Bootcamp — Udemy</span>
         </div>
 
-        <!-- SEPARATED SECTION 1: Professional Experience -->
+        <!-- SEPARATE SECTION 1: PROFESSIONAL EXPERIENCE -->
         <div class="section-header">
             <h2>Professional Experience</h2>
         </div>
@@ -504,7 +515,7 @@
             </div>
         </section>
 
-        <!-- SEPARATED SECTION 2: Academic Roadmap -->
+        <!-- SEPARATED SECTION 2: ACADEMIC ROADMAP -->
         <div class="section-header">
             <h2>Academic Roadmap</h2>
         </div>
@@ -537,7 +548,12 @@
         </section>
 
         <footer>
-            <div>© 2026 B. Sheshadri. All engineering rights reserved.</div>
+            <div>
+                <p>© 2026 B. Sheshadri. All engineering rights reserved.</p>
+                <div class="contact-info-panel">
+                    <p><strong>Direct Email:</strong> sheshadribollene@gmail.com</p>
+                </div>
+            </div>
             <div class="footer-links">
                 <a href="https://linkedin.com/in/b-sheshadri" target="_blank">LinkedIn</a>
                 <a href="https://github.com/sheshadri7-b" target="_blank">GitHub</a>
