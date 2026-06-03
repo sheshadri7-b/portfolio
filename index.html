@@ -13,6 +13,7 @@
             --accent-glow: rgba(99, 102, 241, 0.15);
             --text-primary: #f9fafb;
             --text-secondary: #9ca3af;
+            --success-green: #10b981;
         }
 
         * {
@@ -76,7 +77,7 @@
 
         .badge {
             background: rgba(16, 185, 129, 0.1);
-            color: #10b981;
+            color: var(--success-green);
             border: 1px solid rgba(16, 185, 129, 0.2);
             padding: 6px 14px;
             border-radius: 99px;
@@ -87,7 +88,7 @@
 
         /* Hero Layout */
         .hero {
-            padding: 100px 0 80px 0;
+            padding: 100px 0 60px 0;
         }
 
         .hero h1 {
@@ -131,7 +132,7 @@
 
         /* Section Headings */
         .section-header {
-            margin-top: 100px;
+            margin-top: 80px;
             margin-bottom: 40px;
         }
 
@@ -156,7 +157,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .tech-tag {
@@ -167,9 +168,14 @@
             font-size: 0.9rem;
             font-weight: 500;
             color: #e2e8f0;
+            transition: border-color 0.2s ease;
         }
 
-        /* Premium Dynamic Project Cards */
+        .tech-tag:hover {
+            border-color: var(--accent);
+        }
+
+        /* Project & Specialization Grid Layout */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
@@ -361,7 +367,7 @@
 
         <section class="hero">
             <h1>Engineering Intelligent Systems<br>Through Code & Predictive Models.</h1>
-            <p>Computer Science graduate student specializing in advanced systems architecture, data optimization, and machine learning infrastructure. Merging core development principles with conversational AI and analytical execution.</p>
+            <p>MCA student specializing in advanced systems architecture, data optimization, and machine learning infrastructure. Merging core development principles with conversational AI and analytical execution.</p>
             <div class="cta-group">
                 <a href="#projects" class="btn-primary">Review Engineering Work</a>
             </div>
@@ -373,13 +379,39 @@
         <div class="tech-grid">
             <span class="tech-tag">Python</span>
             <span class="tech-tag">SQL</span>
+            <span class="tech-tag">MongoDB</span>
             <span class="tech-tag">Java</span>
             <span class="tech-tag">C++</span>
             <span class="tech-tag">LangChain</span>
             <span class="tech-tag">OpenAI APIs</span>
-            <span class="tech-tag">Scikit-Learn</span>
             <span class="tech-tag">Data Structures & Algorithms</span>
             <span class="tech-tag">Git Version Control</span>
+        </div>
+
+        <!-- SPECIAL FOCUS: HackerRank Problem Solving & Code Routine -->
+        <div class="section-header">
+            <h2>Problem Solving & Logic</h2>
+        </div>
+        <div class="project-grid" style="grid-template-columns: 1fr; margin-bottom: 30px;">
+            <div class="project-card" style="background: linear-gradient(145deg, #071524, #030a12); border-color: rgba(99, 102, 241, 0.3);">
+                <div>
+                    <div class="project-meta">
+                        <span class="project-category" style="color: var(--success-green);">⚡ Algorithmic Consistency</span>
+                        <span class="tool-badge" style="background: rgba(16, 185, 129, 0.1); color: var(--success-green); border: 1px solid rgba(16, 185, 129, 0.2);">Active Practice</span>
+                    </div>
+                    <h3>Daily Code Routine & Logic Optimization</h3>
+                    <p>Maintaining a highly disciplined programming regimen focused on tackling complex structural puzzles, execution latency minimization, and data structure constraints.</p>
+                    <ul class="project-bullets">
+                        <li>Actively completing core data structural and algorithmic programming benchmarks on <strong>HackerRank</strong>.</li>
+                        <li>Refining problem-solving velocity across complex sorting paradigms, relational logical dependencies, and graph traversal algorithms.</li>
+                    </ul>
+                </div>
+                <div class="project-tools" style="border-color: rgba(255,255,255,0.05);">
+                    <span class="tool-badge" style="background: #22c55e; color: #fff;">HackerRank Verified</span>
+                    <span class="tool-badge">Data Structures</span>
+                    <span class="tool-badge">Runtime Efficiency</span>
+                </div>
+            </div>
         </div>
 
         <div class="section-header" id="projects">
@@ -413,16 +445,14 @@
                         <span class="project-category">Machine Learning / Science</span>
                     </div>
                     <h3>Early-Stage Health Risk Predictive Pipeline</h3>
-                    <span class="project-tag" style="display:none">Early prediction of diabetes</span>
                     <p>An end-to-end predictive framework designed to securely isolate and classify clinical anomaly indicator matrices.</p>
                     <ul class="project-bullets">
                         <li>Constructed complex vector ingestion steps for raw feature engineering datasets using NumPy and Pandas.</li>
-                        <li>Configured high-precision classifier benchmarks utilizing algorithmic optimization within Scikit-Learn.</li>
+                        <li>Configured high-precision classifier benchmarks utilizing algorithmic optimization architectures.</li>
                     </ul>
                 </div>
                 <div class="project-tools">
                     <span class="tool-badge">Python</span>
-                    <span class="tool-badge">Scikit-Learn</span>
                     <span class="tool-badge">Pandas</span>
                     <span class="tool-badge">NumPy</span>
                 </div>
@@ -431,7 +461,16 @@
         </section>
 
         <div class="section-header">
-            <h2>Timeline & Frameworks</h2>
+            <h2>Certifications & Credentials</h2>
+        </div>
+        <div class="tech-grid">
+            <span class="tech-tag" style="border-color: var(--success-green); color: var(--success-green);">Programming with Python — Coursera</span>
+            <span class="tech-tag" style="border-color: var(--success-green); color: var(--success-green);">Data Analytics Job Simulation — Deloitte</span>
+            <span class="tech-tag" style="border-color: var(--success-green); color: var(--success-green);">AI Agents for Everyone & AI Bootcamp — Udemy</span>
+        </div>
+
+        <div class="section-header">
+            <h2>Timeline & Academic Roadmap</h2>
         </div>
         <section class="timeline">
             
@@ -479,9 +518,9 @@
         <footer>
             <div>© 2026 B. Sheshadri. All engineering rights reserved.</div>
             <div class="footer-links">
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-                <a href="https://github.com" target="_blank">GitHub</a>
-                <a href="mailto:your-email@example.com">Email</a>
+                <a href="https://linkedin.com/in/b-sheshadri" target="_blank">LinkedIn</a>
+                <a href="https://github.com/sheshadri7-b" target="_blank">GitHub</a>
+                <a href="mailto:sheshadribollene@gmail.com">Email</a>
             </div>
         </footer>
 
