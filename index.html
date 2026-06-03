@@ -269,6 +269,21 @@
             font-weight: 500;
         }
 
+        .tool-badge-link {
+            font-size: 0.8rem;
+            background: #22c55e;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+
+        .tool-badge-link:hover {
+            background: #16a34a;
+        }
+
         /* Elegant Timeline / Experience Section */
         .timeline {
             display: flex;
@@ -388,7 +403,7 @@
             <span class="tech-tag">Git Version Control</span>
         </div>
 
-        <!-- SPECIAL FOCUS: HackerRank Problem Solving & Code Routine -->
+        <!-- SPECIAL FOCUS: HackerRank Problem Solving & Code Routine (With Active Profile Redirection) -->
         <div class="section-header">
             <h2>Problem Solving & Logic</h2>
         </div>
@@ -407,7 +422,8 @@
                     </ul>
                 </div>
                 <div class="project-tools" style="border-color: rgba(255,255,255,0.05);">
-                    <span class="tool-badge" style="background: #22c55e; color: #fff;">HackerRank Verified</span>
+                    <!-- Made the badge clickable, open in a new window, and linked directly to your profile -->
+                    <a href="https://www.hackerrank.com/profile/sheshadribollene" target="_blank" class="tool-badge-link">🎯 HackerRank Verified Profile</a>
                     <span class="tool-badge">Data Structures</span>
                     <span class="tool-badge">Runtime Efficiency</span>
                 </div>
@@ -469,11 +485,11 @@
             <span class="tech-tag" style="border-color: var(--success-green); color: var(--success-green);">AI Agents for Everyone & AI Bootcamp — Udemy</span>
         </div>
 
+        <!-- SEPARATED SECTION 1: Professional Experience -->
         <div class="section-header">
-            <h2>Timeline & Academic Roadmap</h2>
+            <h2>Professional Experience</h2>
         </div>
         <section class="timeline">
-            
             <div class="timeline-item">
                 <div class="timeline-header">
                     <div class="timeline-title">
@@ -486,7 +502,13 @@
                     <p>Designed and monitored structural backend queries while handling continuous data cleansing pipelines. Provided core analytical translations to optimize decision matrices.</p>
                 </div>
             </div>
+        </section>
 
+        <!-- SEPARATED SECTION 2: Academic Roadmap -->
+        <div class="section-header">
+            <h2>Academic Roadmap</h2>
+        </div>
+        <section class="timeline">
             <div class="timeline-item">
                 <div class="timeline-header">
                     <div class="timeline-title">
@@ -512,7 +534,6 @@
                     <p>Graduated with a cumulative 7.22 CGPA. Anchored foundational coursework in software construction, objective programming, and logic structures.</p>
                 </div>
             </div>
-
         </section>
 
         <footer>
