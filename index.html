@@ -132,17 +132,18 @@
 
         /* Section Headings */
         .section-header {
-            margin-top: 80px;
+            margin-top: 90px;
             margin-bottom: 40px;
         }
 
         .section-header h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
+            font-size: 2rem;
+            font-weight: 800;
             letter-spacing: -0.5px;
             display: flex;
             align-items: center;
             gap: 12px;
+            color: #ffffff;
         }
 
         .section-header h2::after {
@@ -165,7 +166,7 @@
             border: 1px solid var(--card-border);
             padding: 8px 16px;
             border-radius: 6px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 500;
             color: #e2e8f0;
             transition: border-color 0.2s ease;
@@ -175,7 +176,7 @@
             border-color: var(--accent);
         }
 
-        /* Project & Specialization Grid Layout */
+        /* Project Grid Layout */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
@@ -209,18 +210,20 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .project-category {
             color: var(--accent);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .project-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 16px;
             letter-spacing: -0.3px;
@@ -228,7 +231,7 @@
 
         .project-card p {
             color: var(--text-secondary);
-            font-size: 1rem;
+            font-size: 1.05rem;
             margin-bottom: 24px;
         }
 
@@ -241,7 +244,7 @@
             position: relative;
             padding-left: 20px;
             margin-bottom: 10px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #cbd5e1;
         }
 
@@ -261,45 +264,52 @@
         }
 
         .tool-badge {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             background: #14203e;
             color: #93c5fd;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 4px;
             font-weight: 500;
         }
 
-        /* Clickable Link Badge Elements */
+        /* High Visibility Interactive Anchor Badge */
         .btn-link-badge {
-            font-size: 0.8rem;
-            background: #22c55e;
-            color: #fff;
-            padding: 6px 14px;
+            font-size: 0.95rem;
+            background-color: #22c55e;
+            color: #ffffff !important;
+            padding: 10px 20px;
             border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: opacity 0.2s;
+            font-weight: 700;
+            text-decoration: none !important;
+            transition: all 0.2s ease-in-out;
             display: inline-block;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
         }
 
         .btn-link-badge:hover {
-            opacity: 0.9;
+            background-color: #16a34a;
+            transform: scale(1.03);
+            box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
         }
 
-        /* Elegant Timeline / Experience Section */
+        /* Timelines (Experience and Education Separated) */
         .timeline {
             display: flex;
             flex-direction: column;
             gap: 40px;
             position: relative;
             padding-left: 24px;
+            background: rgba(11, 19, 41, 0.4);
+            border: 1px solid var(--card-border);
+            padding: 40px 40px 40px 48px;
+            border-radius: 16px;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 4px; top: 8px; bottom: 8px;
-            width: 1px;
+            left: 24px; top: 48px; bottom: 48px;
+            width: 2px;
             background: var(--card-border);
         }
 
@@ -310,11 +320,12 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -24px; top: 8px;
-            width: 9px; height: 9px;
+            left: -30px; top: 8px;
+            width: 12px; height: 12px;
             border-radius: 50%;
             background: var(--accent);
             box-shadow: 0 0 10px var(--accent);
+            border: 2px solid var(--bg);
         }
 
         .timeline-header {
@@ -323,41 +334,69 @@
             align-items: flex-start;
             flex-wrap: wrap;
             margin-bottom: 12px;
+            gap: 10px;
         }
 
         .timeline-title h4 {
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             font-weight: 700;
+            color: #ffffff;
         }
 
         .timeline-title span {
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: 1.05rem;
+            display: block;
+            margin-top: 2px;
         }
 
         .timeline-date {
             color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: 700;
+            background: rgba(99, 102, 241, 0.1);
+            padding: 4px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
         }
 
         .timeline-body p {
             color: var(--text-secondary);
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
 
-        /* Contact Details Panel */
-        .contact-info-panel {
-            color: var(--text-primary);
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-        
-        .contact-info-panel p {
-            margin-bottom: 6px;
+        /* High Visibility Info Board Box */
+        .info-board-box {
+            background: linear-gradient(145deg, #0f172a, #020617);
+            border: 2px solid var(--accent);
+            padding: 40px;
+            border-radius: 16px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .contact-info-panel strong {
+        .info-board-box h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        .contact-row-highlight {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 16px 24px;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            display: inline-block;
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-row-highlight span {
             color: var(--accent);
         }
 
@@ -370,16 +409,17 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 25px;
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         .footer-links a {
             color: var(--text-primary);
             text-decoration: none;
             margin-left: 24px;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.05rem;
             transition: color 0.2s;
         }
 
@@ -416,26 +456,26 @@
             <span class="tech-tag">C++</span>
             <span class="tech-tag">LangChain</span>
             <span class="tech-tag">OpenAI APIs</span>
-            <span class="tech-tag">Data Structures & Algorithms</span>
-            <span class="tech-tag">Git Version Control</span>
+            <span class="tech-tag">Artificial Intelligence</span>
+            <span class="tech-tag">Machine Learning</span>
         </div>
 
-        <!-- RECONFIGURED FOCUS: HackerRank Problem Solving & Code Routine -->
+        <!-- SPECIAL HIGH-VISIBILITY PANEL: HackerRank Problem Solving Profile -->
         <div class="section-header">
             <h2>Problem Solving & Logic</h2>
         </div>
         <div class="project-grid" style="grid-template-columns: 1fr; margin-bottom: 30px;">
-            <div class="project-card" style="background: linear-gradient(145deg, #071524, #030a12); border-color: rgba(99, 102, 241, 0.3);">
+            <div class="project-card" style="background: linear-gradient(145deg, #051427, #020811); border-color: rgba(99, 102, 241, 0.4); padding: 45px;">
                 <div>
                     <div class="project-meta">
-                        <span class="project-category" style="color: var(--success-green);">⚡ Algorithmic Consistency</span>
+                        <span class="project-category" style="color: var(--success-green); font-size: 0.95rem;">⚡ Algorithmic Consistency</span>
                         <a href="https://www.hackerrank.com/profile/sheshadribollene" target="_blank" class="btn-link-badge">View Live HackerRank Profile ↗</a>
                     </div>
-                    <h3>Daily Code Routine & Logic Optimization</h3>
-                    <p>Maintaining a highly disciplined programming regimen focused on building professional software solutions, handling logical dependencies, and scaling performance parameters.</p>
+                    <h3 style="font-size: 1.75rem;">Daily Code Routine & Logic Optimization</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6;">Maintaining a highly disciplined programming regimen focused on building professional software solutions, handling logical dependencies, and scaling performance parameters.</p>
                     <ul class="project-bullets">
-                        <li>Actively solving computational architecture and design syntax logic daily on <strong>HackerRank</strong>.</li>
-                        <li>Cultivating a robust background in technical problem-solving, structural algorithm implementation, and modular runtime paradigms.</li>
+                        <li style="font-size: 1.05rem;">Actively solving computational architecture and design syntax logic daily on <strong>HackerRank</strong>.</li>
+                        <li style="font-size: 1.05rem;">Cultivating a robust background in technical problem-solving, structural algorithm implementation, and modular runtime paradigms.</li>
                     </ul>
                 </div>
             </div>
@@ -496,7 +536,7 @@
             <span class="tech-tag" style="border-color: var(--success-green); color: var(--success-green);">AI Agents for Everyone & AI Bootcamp — Udemy</span>
         </div>
 
-        <!-- SEPARATE SECTION 1: PROFESSIONAL EXPERIENCE -->
+        <!-- SEPARATE STRUCTURAL CONTAINER: PROFESSIONAL EXPERIENCE -->
         <div class="section-header">
             <h2>Professional Experience</h2>
         </div>
@@ -515,7 +555,7 @@
             </div>
         </section>
 
-        <!-- SEPARATED SECTION 2: ACADEMIC ROADMAP -->
+        <!-- SEPARATE STRUCTURAL CONTAINER: ACADEMIC ROADMAP -->
         <div class="section-header">
             <h2>Academic Roadmap</h2>
         </div>
@@ -547,17 +587,23 @@
             </div>
         </section>
 
+        <!-- HIGH VISIBILITY CONTACT BOARD (Visible plain text to all users) -->
+        <section class="info-board-box">
+            <h3>Contact Details & Communications</h3>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 12px;">For recruitment coordinates, engineering queries, or formal communication, please reach out directly:</p>
+            <div class="contact-row-highlight">
+                <span>Email Reference:</span> sheshadribollene@gmail.com
+            </div>
+        </section>
+
         <footer>
             <div>
                 <p>© 2026 B. Sheshadri. All engineering rights reserved.</p>
-                <div class="contact-info-panel">
-                    <p><strong>Direct Email:</strong> sheshadribollene@gmail.com</p>
-                </div>
             </div>
             <div class="footer-links">
                 <a href="https://linkedin.com/in/b-sheshadri" target="_blank">LinkedIn</a>
                 <a href="https://github.com/sheshadri7-b" target="_blank">GitHub</a>
-                <a href="mailto:sheshadribollene@gmail.com">Email</a>
+                <a href="mailto:sheshadribollene@gmail.com">Email Contact</a>
             </div>
         </footer>
 
