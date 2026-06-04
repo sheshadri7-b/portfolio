@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B Sheshadri | Software Engineer & Data Scientist Portfolio</title>
+    <title>B. Sheshadri | Software Engineer & Data Scientist Portfolio</title>
     <style>
         :root {
             --bg: #030712;
@@ -57,13 +57,15 @@
             padding: 40px 20px;
         }
 
-        /* Navigation Banner */
+        /* Top Bar Layout */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 40px;
+            padding-bottom: 30px;
             border-bottom: 1px solid var(--card-border);
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .nav-logo {
@@ -73,6 +75,27 @@
             background: linear-gradient(to right, #fff, var(--text-secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .header-contacts {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .header-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .header-link:hover {
+            color: var(--accent);
         }
 
         .badge {
@@ -88,7 +111,7 @@
 
         /* Hero Layout */
         .hero {
-            padding: 100px 0 60px 0;
+            padding: 80px 0 60px 0;
         }
 
         .hero h1 {
@@ -132,7 +155,7 @@
 
         /* Section Headings */
         .section-header {
-            margin-top: 90px;
+            margin-top: 80px;
             margin-bottom: 40px;
         }
 
@@ -365,7 +388,7 @@
             font-size: 1.05rem;
         }
 
-        /* High Visibility Info Board Box */
+        /* High Visibility Contact Board Box */
         .info-board-box {
             background: linear-gradient(145deg, #0f172a, #020617);
             border: 2px solid var(--accent);
@@ -378,26 +401,44 @@
         .info-board-box h3 {
             font-size: 1.6rem;
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             letter-spacing: -0.5px;
             color: #ffffff;
         }
 
-        .contact-row-highlight {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.03);
-            padding: 16px 24px;
-            border-radius: 8px;
-            border: 1px solid var(--card-border);
-            display: inline-block;
-            margin-top: 8px;
-            letter-spacing: 0.5px;
+        .contact-grid-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
         }
 
-        .contact-row-highlight span {
+        .contact-card-highlight {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 16px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s ease;
+        }
+
+        .contact-card-highlight:hover {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .contact-card-highlight span {
             color: var(--accent);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 4px;
         }
 
         /* Footer Links */
@@ -414,11 +455,28 @@
             font-size: 1rem;
         }
 
-        .footer-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            margin-left: 24px;
+        .footer-links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links-container h3 {
+            font-size: 1.1rem;
+            color: #ffffff;
             font-weight: 700;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
             font-size: 1.05rem;
             transition: color 0.2s;
         }
@@ -433,8 +491,15 @@
     <div class="container">
         
         <nav>
-            <div class="nav-logo">B Sheshadri</div>
-            <div class="badge">Open to Tech Recruitment</div>
+            <div>
+                <div class="nav-logo">B Sheshadri</div>
+                <div class="badge" style="margin-top: 4px;">Open to Tech Recruitment</div>
+            </div>
+            <div class="header-contacts">
+                <a href="mailto:sheshadribollene@gmail.com" class="header-link">📧 sheshadribollene@gmail.com</a>
+                <a href="https://linkedin.com/in/b-sheshadri" target="_blank" class="header-link">🔗 LinkedIn</a>
+                <a href="https://github.com/sheshadri7-b" target="_blank" class="header-link">🐙 GitHub</a>
+            </div>
         </nav>
 
         <section class="hero">
@@ -460,7 +525,6 @@
             <span class="tech-tag">OpenAI APIs</span>
         </div>
 
-        <!-- SPECIAL HIGH-VISIBILITY PANEL: HackerRank Problem Solving Profile -->
         <div class="section-header">
             <h2>Problem Solving & Logic</h2>
         </div>
@@ -536,7 +600,6 @@
             <span class="tech-tag" style="border-color: var(--success-green); color: var(--success-green);">AI Agents for Everyone & AI Bootcamp — Udemy</span>
         </div>
 
-        <!-- SEPARATE STRUCTURAL CONTAINER: PROFESSIONAL EXPERIENCE -->
         <div class="section-header">
             <h2>Professional Experience</h2>
         </div>
@@ -555,7 +618,6 @@
             </div>
         </section>
 
-        <!-- SEPARATE STRUCTURAL CONTAINER: ACADEMIC ROADMAP -->
         <div class="section-header">
             <h2>Academic Roadmap</h2>
         </div>
@@ -587,12 +649,20 @@
             </div>
         </section>
 
-        <!-- HIGH VISIBILITY CONTACT BOARD (Visible plain text to all users) -->
         <section class="info-board-box">
             <h3>Contact Details & Communications</h3>
-            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 12px;">For recruitment coordinates, engineering queries, or formal communication, please reach out directly:</p>
-            <div class="contact-row-highlight">
-                <span>Email Reference:</span> sheshadribollene@gmail.com
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">For recruitment coordinates, engineering queries, or formal communication, please reach out directly:</p>
+            
+            <div class="contact-grid-display">
+                <a href="mailto:sheshadribollene@gmail.com" class="contact-card-highlight">
+                    <span>Direct Email</span> sheshadribollene@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/b-sheshadri" target="_blank" class="contact-card-highlight">
+                    <span>Professional Network</span> LinkedIn Profile ↗
+                </a>
+                <a href="https://github.com/sheshadri7-b" target="_blank" class="contact-card-highlight">
+                    <span>Source Code Vault</span> GitHub Profile ↗
+                </a>
             </div>
         </section>
 
@@ -600,10 +670,13 @@
             <div>
                 <p>© 2026 B. Sheshadri. All engineering rights reserved.</p>
             </div>
-            <div class="footer-links"><h3>Contacts</h3>
-                <a href="https://linkedin.com/in/b-sheshadri" target="_blank">LinkedIn</a>
-                <a href="https://github.com/sheshadri7-b" target="_blank">GitHub</a>
-                <a href="mailto:sheshadribollene@gmail.com">Email Contact</a>
+            <div class="footer-links-container">
+                <h3>Contacts</h3>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/b-sheshadri" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/sheshadri7-b" target="_blank">GitHub</a>
+                    <a href="mailto:sheshadribollene@gmail.com">Email Contact</a>
+                </div>
             </div>
         </footer>
 
